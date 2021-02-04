@@ -1,3 +1,10 @@
+##############################################################################
+#JHU Data Science Specialization
+#Getting and Cleaning Data Project
+#Author: Kingsley Akpeji
+#Date: 04 February 2021
+#############################################################################
+
 #load needful packages
 library(dplyr)
 library(tidyr)
@@ -68,5 +75,5 @@ trtesDtSb2 <- trtesDtSb %>%
 	summarise(across(.cols = everything(), mean))
 
 #Write Merged data (trtesDtSb) and tidy data set (trtesDtSb2) to txt files
-write.table(trtesDtSb, file = "MergedUCISamsungGal2Data.txt")
-write.table(trtesDtSb, file = "TidyUCISamsungGal2Data.txt")
+write.table(trtesDtSb, file = "MergedUCISamsungGal2Data.txt", row.names = F)
+write.table(trtesDtSb, file = "TidyUCISamsungGal2Data.txt", row.names = F)
